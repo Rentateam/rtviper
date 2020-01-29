@@ -1,0 +1,11 @@
+framework module CommonTools {
+  umbrella header "CommonTools.h"
+
+  export *
+  module * { export * }
+}
+
+module CommonTools.Swift {
+    header "CommonTools-Swift.h"
+    requires objc
+}

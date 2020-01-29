@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "fd4a3466c49b99695f81b934e27f58b861ade432",
+  "iOS" : [
+    {
+      "name" : "CommonTools",
+      "hash" : "2dfd36f98f114fb35087375baa2cb44c904503237365abe48f0828996781a444",
+      "swiftToolchainVersion" : "5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+    }
+  ]
+}
