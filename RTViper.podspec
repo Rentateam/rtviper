@@ -8,35 +8,20 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RTViper'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of RTViper.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '1.0.1'
+  s.summary          = 'Viper version of Rentateam, including coordinators'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Viper version of Rentateam, including coordinators
                        DESC
 
-  s.homepage         = 'https://github.com/A-25/RTViper'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/Rentateam/rtviper'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'A-25' => 'a-25@rentateam.ru' }
-  s.source           = { :git => 'https://github.com/A-25/RTViper.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Rentateam' => 'info@rentateam.ru' }
+  s.source           = { :git => 'https://github.com/Rentateam/RTViper.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'RTViper/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'RTViper' => ['RTViper/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

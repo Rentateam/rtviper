@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FD198B5CDA2341655E3482C /* Pods_RTViper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEC2E03FF8D71E5208758DD /* Pods_RTViper_Tests.framework */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		EB54B43223E45EFB00E0062F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54B43123E45EFB00E0062F /* AppDelegate.swift */; };
+		EB54B43B23E45EFD00E0062F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB54B43A23E45EFD00E0062F /* Assets.xcassets */; };
+		EB54B43E23E45EFD00E0062F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB54B43C23E45EFD00E0062F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CEC2E03FF8D71E5208758DD /* Pods_RTViper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTViper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514E16008E42DD181947941D /* Pods-RTViper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTViper_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RTViper_Tests/Pods-RTViper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* RTViper_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RTViper_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		81D809C8E9349BD14A45FAEA /* RTViper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RTViper.podspec; path = ../RTViper.podspec; sourceTree = "<group>"; };
-		89FAFB1121925CCC739C3E53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		81D809C8E9349BD14A45FAEA /* RTViper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RTViper.podspec; path = ../RTViper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		89FAFB1121925CCC739C3E53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AFF5A94BD0CBEFC982319FC6 /* Pods-RTViper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTViper_Tests.release.xcconfig"; path = "Target Support Files/Pods-RTViper_Tests/Pods-RTViper_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C4C4824E0FC800F490452308 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C4C4824E0FC800F490452308 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EB54B42F23E45EFB00E0062F /* RTViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB54B43123E45EFB00E0062F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB54B43A23E45EFD00E0062F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB54B43D23E45EFD00E0062F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB54B43F23E45EFD00E0062F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
+		EB54B42C23E45EFB00E0062F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FD198B5CDA2341655E3482C /* Pods_RTViper_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +43,6 @@
 				514E16008E42DD181947941D /* Pods-RTViper_Tests.debug.xcconfig */,
 				AFF5A94BD0CBEFC982319FC6 /* Pods-RTViper_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -49,7 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACE81AFB9204008FA782 /* Tests */,
+				EB54B43023E45EFB00E0062F /* RTViper */,
 				607FACD11AFB9204008FA782 /* Products */,
 				011EACA71937D07713117B17 /* Pods */,
 				B2047E9A7822AEC0A9A5E2F3 /* Frameworks */,
@@ -59,26 +60,9 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACE51AFB9204008FA782 /* RTViper_Tests.xctest */,
+				EB54B42F23E45EFB00E0062F /* RTViper.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
@@ -99,27 +83,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB54B43023E45EFB00E0062F /* RTViper */ = {
+			isa = PBXGroup;
+			children = (
+				EB54B43123E45EFB00E0062F /* AppDelegate.swift */,
+				EB54B43A23E45EFD00E0062F /* Assets.xcassets */,
+				EB54B43C23E45EFD00E0062F /* LaunchScreen.storyboard */,
+				EB54B43F23E45EFD00E0062F /* Info.plist */,
+			);
+			path = RTViper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACE41AFB9204008FA782 /* RTViper_Tests */ = {
+		EB54B42E23E45EFB00E0062F /* RTViper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RTViper_Tests" */;
+			buildConfigurationList = EB54B44023E45EFD00E0062F /* Build configuration list for PBXNativeTarget "RTViper" */;
 			buildPhases = (
-				BC9FF3B919F3E2399627C9C1 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				A38B529B4BAEBF17E347A614 /* [CP] Embed Pods Frameworks */,
+				EB54B42B23E45EFB00E0062F /* Sources */,
+				EB54B42C23E45EFB00E0062F /* Frameworks */,
+				EB54B42D23E45EFB00E0062F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RTViper_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* RTViper_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = RTViper;
+			productName = RTViper;
+			productReference = EB54B42F23E45EFB00E0062F /* RTViper.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -127,18 +120,13 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
+					EB54B42E23E45EFB00E0062F = {
+						CreatedOnToolsVersion = 11.3.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -147,6 +135,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -155,74 +144,44 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACE41AFB9204008FA782 /* RTViper_Tests */,
+				EB54B42E23E45EFB00E0062F /* RTViper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		607FACE31AFB9204008FA782 /* Resources */ = {
+		EB54B42D23E45EFB00E0062F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB54B43E23E45EFD00E0062F /* LaunchScreen.storyboard in Resources */,
+				EB54B43B23E45EFD00E0062F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		A38B529B4BAEBF17E347A614 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RTViper_Tests/Pods-RTViper_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RTViper/RTViper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTViper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RTViper_Tests/Pods-RTViper_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC9FF3B919F3E2399627C9C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RTViper_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		607FACE11AFB9204008FA782 /* Sources */ = {
+		EB54B42B23E45EFB00E0062F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				EB54B43223E45EFB00E0062F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB54B43C23E45EFD00E0062F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB54B43D23E45EFD00E0062F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		607FACED1AFB9204008FA782 /* Debug */ = {
@@ -324,43 +283,58 @@
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
+		EB54B44123E45EFD00E0062F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 514E16008E42DD181947941D /* Pods-RTViper_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RTViper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.rentateam.RTViper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTViper_Example.app/RTViper_Example";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		607FACF41AFB9204008FA782 /* Release */ = {
+		EB54B44223E45EFD00E0062F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFF5A94BD0CBEFC982319FC6 /* Pods-RTViper_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = RTViper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.1;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.rentateam.RTViper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RTViper_Example.app/RTViper_Example";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -376,11 +350,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RTViper_Tests" */ = {
+		EB54B44023E45EFD00E0062F /* Build configuration list for PBXNativeTarget "RTViper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
+				EB54B44123E45EFD00E0062F /* Debug */,
+				EB54B44223E45EFD00E0062F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

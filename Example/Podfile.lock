@@ -1,0 +1,16 @@
+PODS:
+  - RTViper (1.0.1)
+
+DEPENDENCIES:
+  - RTViper (from `../`)
+
+EXTERNAL SOURCES:
+  RTViper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RTViper: b8891342900b0d69d611f740c124aa5752f81ba2
+
+PODFILE CHECKSUM: 1aac21a169b1b662d6e1d5ee760ae37b56a1f659
+
+COCOAPODS: 1.8.4
