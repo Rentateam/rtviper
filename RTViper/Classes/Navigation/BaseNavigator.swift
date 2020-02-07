@@ -4,11 +4,11 @@
 
 import UIKit
 
-final class BaseNavigator: NSObject {
+final public class BaseNavigator: NSObject {
 
     private weak var rootController: UINavigationController!
     
-    init(rootController: UINavigationController) {
+    public init(rootController: UINavigationController) {
         self.rootController = rootController
         super.init()
     }
@@ -71,7 +71,7 @@ final class BaseNavigator: NSObject {
 // MARK: - Presentable
 
 extension BaseNavigator: Presentable {
-    func toPresent() -> UIViewController {
+    public func toPresent() -> UIViewController {
         return rootController
     }
 }
@@ -80,18 +80,18 @@ extension BaseNavigator: Presentable {
 
 extension BaseNavigator: Navigating {
 
-    var isPresenting: Bool {
+    public var isPresenting: Bool {
         return rootController.presentedViewController != nil
     }
 
-    func present(_ module: Presentable, animated: Bool) {
+    public func present(_ module: Presentable, animated: Bool) {
         presentAt(rootController, module: module, presentationStyle: .none, animated: animated)
     }
     
-    func presentModally(_ module: Presentable, animated: Bool,
-                        presentationStyle: UIModalPresentationStyle,
-                        transitionStyle: UIModalTransitionStyle?,
-                        completion: (() -> Void)? = nil) {
+    public func presentModally(_ module: Presentable, animated: Bool,
+                               presentationStyle: UIModalPresentationStyle,
+                               transitionStyle: UIModalTransitionStyle?,
+                               completion: (() -> Void)? = nil) {
         
         presentModallyAt(rootController,
                          module: module,
@@ -101,7 +101,7 @@ extension BaseNavigator: Navigating {
                          completion: completion)
     }
     
-    func presentCustomModally(_ module: Presentable, animated: Bool) {
+    public func presentCustomModally(_ module: Presentable, animated: Bool) {
         
         let controller = module.toPresent()
         
@@ -115,13 +115,13 @@ extension BaseNavigator: Navigating {
                        transitionStyle: .crossDissolve)
     }
     
-    func isCanBePresentedModallyAtTop() -> Bool {
+    public func isCanBePresentedModallyAtTop() -> Bool {
         return findVisibleViewController(rootController) != nil
     }
     
-    func presentModallyAtTop(_ module: Presentable, animated: Bool,
-                             presentationStyle: UIModalPresentationStyle,
-                             transitionStyle: UIModalTransitionStyle?) {
+    public func presentModallyAtTop(_ module: Presentable, animated: Bool,
+                                    presentationStyle: UIModalPresentationStyle,
+                                    transitionStyle: UIModalTransitionStyle?) {
         
         guard let visibleViewController = findVisibleViewController(rootController) else {
             assertionFailure("Visible view controller not found")
@@ -135,7 +135,7 @@ extension BaseNavigator: Navigating {
                          transitionStyle: transitionStyle)
     }
     
-    func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle, animated: Bool) {
+    public func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle, animated: Bool) {
         guard let visibleViewController = findVisibleViewController(rootController) else {
             assertionFailure("Visible view controller not found")
             return
@@ -144,11 +144,11 @@ extension BaseNavigator: Navigating {
         presentAt(visibleViewController, module: module, presentationStyle: presentationStyle, animated: animated)
     }
     
-    func dismissModule(animated: Bool) {
+    public func dismissModule(animated: Bool) {
         dismissModule(animated: animated, completion: nil)
     }
     
-    func dismissModule(animated: Bool, completion: (() -> Void)?) {
+    public func dismissModule(animated: Bool, completion: (() -> Void)?) {
         if isPresenting {
             rootController.dismiss(animated: animated, completion: completion)
         } else if let completion = completion {
@@ -157,11 +157,11 @@ extension BaseNavigator: Navigating {
         }
     }
     
-    func dismissModuleAtTop(animated: Bool) {
+    public func dismissModuleAtTop(animated: Bool) {
         dismissModuleAtTop(animated: animated, completion: nil)
     }
     
-    func dismissModuleAtTop(animated: Bool, completion: (() -> Void)?) {
+    public func dismissModuleAtTop(animated: Bool, completion: (() -> Void)?) {
         
         guard let visibleViewController = findVisibleViewController(rootController),
               let rootOfVisible = visibleViewController.presentingViewController else {
@@ -176,11 +176,11 @@ extension BaseNavigator: Navigating {
         rootOfVisible.dismiss(animated: animated, completion: completion)
     }
     
-    func push(_ module: Presentable, animated: Bool) {
+    public func push(_ module: Presentable, animated: Bool) {
         push(module, animated: animated, completion: nil)
     }
 
-    func push(_ module: Presentable, animated: Bool, completion: (() -> Void)?) {
+    public func push(_ module: Presentable, animated: Bool, completion: (() -> Void)?) {
         let controller = module.toPresent()
         guard
             controller is CustomNavigationController == false
@@ -193,27 +193,27 @@ extension BaseNavigator: Navigating {
         rootController.pushViewController(controller, animated: animated)
     }
 
-    func popModule(animated: Bool) {
+    public func popModule(animated: Bool) {
         popModule(animated: animated, completion: nil)
     }
 
-    func popModule(animated: Bool, completion: (() -> Void)?) {
+    public func popModule(animated: Bool, completion: (() -> Void)?) {
         //rootController.popViewController(animated: animated, completion: completion)
         rootController.popViewController(animated: animated)
     }
     
-    func setRootModule(_ module: Presentable, hideBar: Bool) {
+    public func setRootModule(_ module: Presentable, hideBar: Bool) {
         let controller = module.toPresent()
         
         rootController.setViewControllers([controller], animated: false)
         rootController.isNavigationBarHidden = hideBar
     }
     
-    func popToRootModule(animated: Bool) {
+    public func popToRootModule(animated: Bool) {
         rootController?.popToRootViewController(animated: animated)
     }
 
-    func unwind(count: Int, offset: Int, animated: Bool) {
+    public func unwind(count: Int, offset: Int, animated: Bool) {
         var controllers = rootController.viewControllers
         let fromIndex = controllers.count - count - offset
         let toIndex = controllers.count - offset
@@ -222,16 +222,16 @@ extension BaseNavigator: Navigating {
         rootController.setViewControllers(controllers, animated: animated)
     }
 
-    func unwind(to module: Presentable, animated: Bool) {
+    public func unwind(to module: Presentable, animated: Bool) {
         rootController.popToViewController(module.toPresent(), animated: animated)
     }
 
-    func clearNavigationStack() {
+    public func clearNavigationStack() {
         //rootController.clearNavigationStack()
         rootController.setViewControllers([], animated: false)
     }
 
-    func currentPresentable() -> Presentable? {
+    public func currentPresentable() -> Presentable? {
         return findVisibleViewController(rootController)
     }
 }

@@ -4,12 +4,12 @@
 
 import Foundation
 
-final class AnyCoordinatable<DeepLink, Output>: Coordinatable {
+final public class AnyCoordinatable<DeepLink, Output>: Coordinatable {
     private let setOutputClosure: (Output?) -> Void
     private let getOutputClosure: () -> Output?
     private let startClosure: (DeepLink, Bool, (() -> Void)?) -> Void
 
-    init<T: Coordinatable>(_ coordionator: T) where T.DeepLink == DeepLink, T.Output == Output {
+    public init<T: Coordinatable>(_ coordionator: T) where T.DeepLink == DeepLink, T.Output == Output {
         startClosure = { (deepLink, animated, completion) in
             coordionator.start(with: deepLink, animated: animated, completion: completion)
         }
@@ -23,11 +23,11 @@ final class AnyCoordinatable<DeepLink, Output>: Coordinatable {
         }
     }
 
-    func start(with deepLink: DeepLink, animated: Bool, completion: (() -> Void)?) {
+    public func start(with deepLink: DeepLink, animated: Bool, completion: (() -> Void)?) {
         startClosure(deepLink, animated, completion)
     }
 
-    var output: Output? {
+    public var output: Output? {
         get {
             return getOutputClosure()
         }

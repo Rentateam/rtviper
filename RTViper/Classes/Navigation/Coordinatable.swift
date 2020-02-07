@@ -4,7 +4,7 @@
 
 import Foundation
 
-protocol Coordinatable: class {
+public protocol Coordinatable: class {
     associatedtype DeepLink
     associatedtype Output
 
@@ -13,7 +13,7 @@ protocol Coordinatable: class {
     func start(with option: DeepLink, animated: Bool, completion: (() -> Void)?)
 }
 
-extension Coordinatable {
+public extension Coordinatable {
     func start(with option: DeepLink, animated: Bool) {
         start(with: option, animated: animated, completion: nil)
     }

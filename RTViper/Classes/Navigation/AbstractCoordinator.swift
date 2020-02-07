@@ -8,51 +8,51 @@ open class AbstractCoordinator: NSObject {
 
     private(set) var modulesInStack: Int = 0
     
-    var isModulesStackEmpty: Bool {
+    public var isModulesStackEmpty: Bool {
         return modulesInStack == 0
     }
     
-    var navigator: Navigating
+    public var navigator: Navigating
 
-    init(navigator: Navigating) {
+    public init(navigator: Navigating) {
         self.navigator = navigator
     }
     
-    var childCoordinators: [AnyObject] = []
+    public var childCoordinators: [AnyObject] = []
 
     open func isCanBeSwiped() -> Bool {
         return true
     }
 
-    func start() {}
+    public func start() {}
     
-    func push(_ module: Presentable, animated: Bool) {
+    public func push(_ module: Presentable, animated: Bool) {
         modulesInStack += 1
         navigator.push(module, animated: animated)
     }
 
-    func push(_ module: Presentable, animated: Bool, completion: (() -> Void)?) {
+    public func push(_ module: Presentable, animated: Bool, completion: (() -> Void)?) {
         modulesInStack += 1
         navigator.push(module, animated: animated, completion: completion)
     }
 
-    func popModule(animated: Bool) {
+    public func popModule(animated: Bool) {
         modulesInStack -= 1
         navigator.popModule(animated: animated)
     }
 
-    func popModule(animated: Bool, completion: (() -> Void)?) {
+    public func popModule(animated: Bool, completion: (() -> Void)?) {
         modulesInStack -= 1
         navigator.popModule(animated: animated, completion: completion)
     }
 
-    func popAllModules(animated: Bool) {
+    public func popAllModules(animated: Bool) {
         navigator.unwind(count: modulesInStack, offset: 0, animated: animated)
         modulesInStack = 0
     }
     
     // add only unique object
-    func addDependency(_ coordinator: AnyObject) {
+    public func addDependency(_ coordinator: AnyObject) {
         for element in childCoordinators {
             if element === coordinator {
                 return
@@ -61,11 +61,11 @@ open class AbstractCoordinator: NSObject {
         childCoordinators.append(coordinator)
     }
 
-    func popDependency() {
+    public func popDependency() {
         removeDependency(childCoordinators.last)
     }
 
-    func removeDependency(_ coordinator: AnyObject?) {
+    public func removeDependency(_ coordinator: AnyObject?) {
         guard
             childCoordinators.isEmpty == false,
             let coordinator = coordinator

@@ -4,7 +4,7 @@
 
 import UIKit
 
-protocol Navigating: Presentable {
+public protocol Navigating: Presentable {
     
     var isPresenting: Bool { get }
     
