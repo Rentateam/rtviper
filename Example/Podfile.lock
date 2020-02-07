@@ -1,5 +1,5 @@
 PODS:
-  - RTViper (1.0.1)
+  - RTViper (1.0.2)
 
 DEPENDENCIES:
   - RTViper (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RTViper: b8891342900b0d69d611f740c124aa5752f81ba2
+  RTViper: 1fe209dfcd2e9922b2b74ae37a3fd85e83db08cf
 
 PODFILE CHECKSUM: 86b754848d1c2f4e72e3e22dde51aca457077d1e
 
