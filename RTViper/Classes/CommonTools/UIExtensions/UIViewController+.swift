@@ -3,7 +3,7 @@
 import UIKit
 
 extension UIViewController: Presentable {
-    func toPresent() -> UIViewController {
+    public func toPresent() -> UIViewController {
         return self
     }
 }
