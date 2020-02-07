@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F9A0A551B33285A41D078C7 /* Pods_RTViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E67811AEA28A2762409D26 /* Pods_RTViper.framework */; };
 		EB54B43223E45EFB00E0062F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54B43123E45EFB00E0062F /* AppDelegate.swift */; };
 		EB54B43B23E45EFD00E0062F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB54B43A23E45EFD00E0062F /* Assets.xcassets */; };
 		EB54B43E23E45EFD00E0062F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB54B43C23E45EFD00E0062F /* LaunchScreen.storyboard */; };
@@ -15,15 +16,18 @@
 /* Begin PBXFileReference section */
 		0CEC2E03FF8D71E5208758DD /* Pods_RTViper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTViper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514E16008E42DD181947941D /* Pods-RTViper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTViper_Tests.debug.xcconfig"; path = "Target Support Files/Pods-RTViper_Tests/Pods-RTViper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		544E941BEEC3695C9A6226DB /* Pods-RTViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTViper.debug.xcconfig"; path = "Target Support Files/Pods-RTViper/Pods-RTViper.debug.xcconfig"; sourceTree = "<group>"; };
 		81D809C8E9349BD14A45FAEA /* RTViper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RTViper.podspec; path = ../RTViper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		89FAFB1121925CCC739C3E53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AFF5A94BD0CBEFC982319FC6 /* Pods-RTViper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTViper_Tests.release.xcconfig"; path = "Target Support Files/Pods-RTViper_Tests/Pods-RTViper_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B1E67811AEA28A2762409D26 /* Pods_RTViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C4824E0FC800F490452308 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		EB54B42F23E45EFB00E0062F /* RTViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB54B43123E45EFB00E0062F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB54B43A23E45EFD00E0062F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB54B43D23E45EFD00E0062F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB54B43F23E45EFD00E0062F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED9D5AB28C4B44CDC2C3FDA1 /* Pods-RTViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTViper.release.xcconfig"; path = "Target Support Files/Pods-RTViper/Pods-RTViper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9A0A551B33285A41D078C7 /* Pods_RTViper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				514E16008E42DD181947941D /* Pods-RTViper_Tests.debug.xcconfig */,
 				AFF5A94BD0CBEFC982319FC6 /* Pods-RTViper_Tests.release.xcconfig */,
+				544E941BEEC3695C9A6226DB /* Pods-RTViper.debug.xcconfig */,
+				ED9D5AB28C4B44CDC2C3FDA1 /* Pods-RTViper.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -79,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				0CEC2E03FF8D71E5208758DD /* Pods_RTViper_Tests.framework */,
+				B1E67811AEA28A2762409D26 /* Pods_RTViper.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB54B44023E45EFD00E0062F /* Build configuration list for PBXNativeTarget "RTViper" */;
 			buildPhases = (
+				300C311D4FC8D897F0642F18 /* [CP] Check Pods Manifest.lock */,
 				EB54B42B23E45EFB00E0062F /* Sources */,
 				EB54B42C23E45EFB00E0062F /* Frameworks */,
 				EB54B42D23E45EFB00E0062F /* Resources */,
+				B92C4FF3BA5E20AAA8F91F0E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +170,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		300C311D4FC8D897F0642F18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RTViper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B92C4FF3BA5E20AAA8F91F0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RTViper/Pods-RTViper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RTViper/RTViper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTViper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RTViper/Pods-RTViper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB54B42B23E45EFB00E0062F /* Sources */ = {
@@ -285,6 +338,7 @@
 		};
 		EB54B44123E45EFD00E0062F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544E941BEEC3695C9A6226DB /* Pods-RTViper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -314,6 +368,7 @@
 		};
 		EB54B44223E45EFD00E0062F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED9D5AB28C4B44CDC2C3FDA1 /* Pods-RTViper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;

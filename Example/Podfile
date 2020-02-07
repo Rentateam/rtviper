@@ -1,5 +1,7 @@
 use_frameworks!
-target 'RTViper_Tests' do
+platform :ios, '10.0'
+
+target 'RTViper' do
   pod 'RTViper', :path => '../'
   
   
