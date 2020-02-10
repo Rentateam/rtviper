@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RTViper'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Viper version of Rentateam, including coordinators'
 
   s.description      = <<-DESC
