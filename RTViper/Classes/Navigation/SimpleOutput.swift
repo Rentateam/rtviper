@@ -4,6 +4,6 @@
 
 import Foundation
 
-struct SimpleOutput {
+public struct SimpleOutput {
     var onFinish: (() -> Void)?
 }
