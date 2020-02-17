@@ -4,7 +4,7 @@
 
 import Foundation
 
-open class AbstractCoordinator: NSObject {
+open class AbstractCoordinator: NSObject, NavigatorDelegate {
 
     private(set) var modulesInStack: Int = 0
     
@@ -77,5 +77,9 @@ open class AbstractCoordinator: NSObject {
                 break
             }
         }
+    }
+    
+    open func willFinishSwipeModule() {
+        modulesInStack -= 1
     }
 }

@@ -6,11 +6,14 @@ import UIKit
 
 final public class BaseNavigator: NSObject {
 
-    private weak var rootController: UINavigationController!
-    
-    public init(rootController: UINavigationController) {
+    public weak var delegate: NavigatorDelegate?
+    private weak var rootController: CustomNavigationController!
+
+    public init(rootController: CustomNavigationController) {
         self.rootController = rootController
         super.init()
+        
+        rootController.interactivePopDelegate = self
     }
     
     // MARK: - Helpers
@@ -189,8 +192,7 @@ extension BaseNavigator: Navigating {
                 return
         }
 
-        //rootController.pushViewController(controller, animated: animated, completion: completion)
-        rootController.pushViewController(controller, animated: animated)
+        rootController.pushViewController(controller, animated: animated, completion: completion)
     }
 
     public func popModule(animated: Bool) {
@@ -198,8 +200,7 @@ extension BaseNavigator: Navigating {
     }
 
     public func popModule(animated: Bool, completion: (() -> Void)?) {
-        //rootController.popViewController(animated: animated, completion: completion)
-        rootController.popViewController(animated: animated)
+        rootController.popViewController(animated: animated, completion: completion)
     }
     
     public func setRootModule(_ module: Presentable, hideBar: Bool) {
@@ -233,5 +234,11 @@ extension BaseNavigator: Navigating {
 
     public func currentPresentable() -> Presentable? {
         return findVisibleViewController(rootController)
+    }
+}
+
+extension BaseNavigator: InteractivePopDelegate {
+    public func willFinishInteractivePop() {
+        delegate?.willFinishSwipeModule()
     }
 }
