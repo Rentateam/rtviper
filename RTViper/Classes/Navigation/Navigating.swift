@@ -5,6 +5,7 @@
 import UIKit
 
 public protocol Navigating: Presentable {
+    var delegate: NavigatorDelegate? { get set }
     
     var isPresenting: Bool { get }
     
