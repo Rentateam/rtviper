@@ -1,0 +1,6 @@
+framework module RTViper {
+  umbrella header "RTViper-umbrella.h"
+
+  export *
+  module * { export * }
+}
