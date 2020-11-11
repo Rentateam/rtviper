@@ -1,0 +1,6 @@
+framework module Pods_RTViper {
+  umbrella header "Pods-RTViper-umbrella.h"
+
+  export *
+  module * { export * }
+}

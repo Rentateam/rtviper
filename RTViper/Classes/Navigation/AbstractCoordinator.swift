@@ -82,4 +82,20 @@ open class AbstractCoordinator: NSObject, NavigatorDelegate {
     open func willFinishSwipeModule() {
         modulesInStack -= 1
     }
+    
+    public func presentOnWindowTop(_ controller: UIViewController, animated: Bool = true) {
+        guard let rootVC = UIApplication.shared.windows.first?.rootViewController else { return }
+        let topVC = getTopVC(for: rootVC)
+        topVC.present(controller,
+                      animated: animated,
+                      completion: nil)
+    }
+
+    private func getTopVC(for vc: UIViewController) -> UIViewController {
+        if let topVC = vc.presentedViewController {
+            return getTopVC(for: topVC)
+        } else {
+            return vc
+        }
+    }
 }
