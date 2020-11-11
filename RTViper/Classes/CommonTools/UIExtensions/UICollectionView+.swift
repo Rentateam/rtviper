@@ -13,6 +13,10 @@ public extension UICollectionView {
         register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
     
+    func registerClass<T: UICollectionViewCell>(_: T.Type) {
+        register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
+    }
+    
     func dequeueReusableTypedCell<CellType>(withIdentifier identifier: String,
                                             for indexPath: IndexPath,
                                             cellType: CellType.Type) -> CellType {

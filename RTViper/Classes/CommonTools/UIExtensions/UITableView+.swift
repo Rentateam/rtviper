@@ -31,6 +31,10 @@ public extension UITableView {
         register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
     
+    func registerClass<T: UITableViewCell>(_: T.Type) {
+        register(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
+    }
+    
     func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T {
         let identifier = T.defaultReuseIdentifier
         
