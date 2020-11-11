@@ -28,7 +28,6 @@
 		98795693FD3A03F00D829CF59F43CC5B /* DefaultNibAssociatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835BC86FD7C860669A6FB89E06DC7F01 /* DefaultNibAssociatable.swift */; };
 		AF7E8E4BDC187460E3045E22C265BB59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		B3563C922DC11126199D0E457A986A3E /* Navigating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F701117D9E646FD572B8B87FAA739BF /* Navigating.swift */; };
-		BA291157255849980049FB1D /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA291156255849980049FB1D /* Collection+SafeIndex.swift */; };
 		BE9016F61736D1A2CC0D177922974674 /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1471B77AB5B6EF573EEFEC013D79F954 /* AbstractCoordinator.swift */; };
 		C03C509D5AF8C3C8123FDF0C5B0AE45D /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8BDEA5D4A1F2BD56859100C129D2A5 /* UIView+LoadFromNib.swift */; };
 		E125C853639EA19FDFC9D4D0E0740D74 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67999AFA89FF8DAE439C97D5C85C898C /* ClassNameProtocol.swift */; };
@@ -79,7 +78,6 @@
 		AAA80D8D475A26DD94AE632368CA09B3 /* Pods-RTViper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RTViper-Info.plist"; sourceTree = "<group>"; };
 		B533664A68EA1BB808C8A64F431446A5 /* RTViper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RTViper.modulemap; sourceTree = "<group>"; };
 		B6965BA082C5C3399A1F2A2072ABC785 /* Pods-RTViper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RTViper-umbrella.h"; sourceTree = "<group>"; };
-		BA291156255849980049FB1D /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		BAAAA43311BD52FFAB7B820FFBB97B36 /* Pods_RTViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C285E104A392CF591D072F95EC4713BA /* Presentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		C5BA83880FC150145A1B39A05F8A38C3 /* Pods-RTViper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RTViper-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 		920CC5E2811F81D4D71D3678C192B1E1 /* CommonTools */ = {
 			isa = PBXGroup;
 			children = (
-				BA2911552558495B0049FB1D /* Extentions */,
 				1F93EE8D8888816438541A784AD277F8 /* Protocols */,
 				F4C0F460BB78C55EB916B09761A80BED /* UIExtensions */,
 			);
@@ -233,14 +230,6 @@
 				2320F1A8948BFD042769E108A59362EF /* RTViper.podspec */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		BA2911552558495B0049FB1D /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				BA291156255849980049FB1D /* Collection+SafeIndex.swift */,
-			);
-			path = Extentions;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -421,7 +410,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2226EFF0CA16E6FD76F624720C6DF5D9 /* Pods-RTViper-dummy.m in Sources */,
-				BA291157255849980049FB1D /* Collection+SafeIndex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
