@@ -35,7 +35,7 @@ final public class BaseNavigator: NSObject {
         return rootViewController
     }
 
-    private func presentAt(_ viewController: UIViewController, module: Presentable, presentationStyle: UIModalPresentationStyle, animated: Bool) {
+    private func presentAt(_ viewController: UIViewController, module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool) {
         presentModallyAt(viewController,
                          module: module,
                          animated: animated,
@@ -88,7 +88,7 @@ extension BaseNavigator: Navigating {
     }
 
     public func present(_ module: Presentable, animated: Bool) {
-        presentAt(rootController, module: module, presentationStyle: .none, animated: animated)
+        presentAt(rootController, module: module, presentationStyle: nil, animated: animated)
     }
     
     public func presentModally(_ module: Presentable, animated: Bool,
@@ -138,7 +138,7 @@ extension BaseNavigator: Navigating {
                          transitionStyle: transitionStyle)
     }
     
-    public func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle, animated: Bool) {
+    public func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool) {
         guard let visibleViewController = findVisibleViewController(rootController) else {
             assertionFailure("Visible view controller not found")
             return

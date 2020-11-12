@@ -23,7 +23,7 @@ public protocol Navigating: Presentable {
                              presentationStyle: UIModalPresentationStyle,
                              transitionStyle: UIModalTransitionStyle?)
     
-    func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle, animated: Bool)
+    func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool)
     
     func push(_ module: Presentable, animated: Bool)
     func push(_ module: Presentable, animated: Bool, completion: (() -> Void)?)
