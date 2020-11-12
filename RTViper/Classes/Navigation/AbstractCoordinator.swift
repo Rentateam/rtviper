@@ -83,19 +83,11 @@ open class AbstractCoordinator: NSObject, NavigatorDelegate {
         modulesInStack -= 1
     }
     
-    public func presentOnWindowTop(_ controller: UIViewController, animated: Bool = true) {
-        guard let rootVC = UIApplication.shared.windows.first?.rootViewController else { return }
-        let topVC = getTopVC(for: rootVC)
-        topVC.present(controller,
-                      animated: animated,
-                      completion: nil)
+    public func presentAtTop(_ controller: UIViewController, presentationStyle: UIModalPresentationStyle?, animated: Bool = true) {
+        navigator.presentAtTop(controller, presentationStyle: presentationStyle, animated: true)
     }
-
-    private func getTopVC(for vc: UIViewController) -> UIViewController {
-        if let topVC = vc.presentedViewController {
-            return getTopVC(for: topVC)
-        } else {
-            return vc
-        }
+    
+    public func dismissModuleAtTop() {
+        navigator.dismissModuleAtTop(animated: true)
     }
 }
