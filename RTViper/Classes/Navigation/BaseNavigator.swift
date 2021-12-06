@@ -151,7 +151,7 @@ extension BaseNavigator: Navigating {
             return
         }
         
-        presentAt(visibleViewController, module: module, presentationStyle: presentationStyle, animated: animated)
+        presentAt(visibleViewController, module: module, presentationStyle: presentationStyle, animated: animated, shouldPreventDismissGesture: shouldPreventDismissGesture)
     }
     
     public func dismissModule(animated: Bool) {
