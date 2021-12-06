@@ -35,12 +35,13 @@ final public class BaseNavigator: NSObject {
         return rootViewController
     }
 
-    private func presentAt(_ viewController: UIViewController, module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool) {
+    private func presentAt(_ viewController: UIViewController, module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool, shouldPreventDismissGesture: Bool = true) {
         presentModallyAt(viewController,
                          module: module,
                          animated: animated,
                          presentationStyle: presentationStyle,
-                         transitionStyle: nil)
+                         transitionStyle: nil,
+                         shouldPreventDismissGesture: shouldPreventDismissGesture)
     }
 
     private func presentModallyAt(_ viewController: UIViewController,
@@ -48,13 +49,16 @@ final public class BaseNavigator: NSObject {
                                   animated: Bool,
                                   presentationStyle: UIModalPresentationStyle?,
                                   transitionStyle: UIModalTransitionStyle?,
+                                  shouldPreventDismissGesture: Bool = true,
                                   completion: (() -> Void)? = nil) {
         
         let controller = module.toPresent()
 
         if #available(iOS 13.0, *) {
-            // To prevent modal controller gesture dismiss
-            controller.isModalInPresentation = true
+            if shouldPreventDismissGesture {
+                // To prevent modal controller gesture dismiss
+                controller.isModalInPresentation = true
+            }
         }
 
         controller.modalPresentationCapturesStatusBarAppearance = true
@@ -82,7 +86,6 @@ extension BaseNavigator: Presentable {
 // MARK: - Navigating
 
 extension BaseNavigator: Navigating {
-
     public var isPresenting: Bool {
         return rootController.presentedViewController != nil
     }
@@ -94,6 +97,7 @@ extension BaseNavigator: Navigating {
     public func presentModally(_ module: Presentable, animated: Bool,
                                presentationStyle: UIModalPresentationStyle,
                                transitionStyle: UIModalTransitionStyle?,
+                               shouldPreventDismissGesture: Bool = true,
                                completion: (() -> Void)? = nil) {
         
         presentModallyAt(rootController,
@@ -101,6 +105,7 @@ extension BaseNavigator: Navigating {
                          animated: animated,
                          presentationStyle: presentationStyle,
                          transitionStyle: transitionStyle,
+                         shouldPreventDismissGesture: shouldPreventDismissGesture,
                          completion: completion)
     }
     
@@ -124,7 +129,8 @@ extension BaseNavigator: Navigating {
     
     public func presentModallyAtTop(_ module: Presentable, animated: Bool,
                                     presentationStyle: UIModalPresentationStyle,
-                                    transitionStyle: UIModalTransitionStyle?) {
+                                    transitionStyle: UIModalTransitionStyle?,
+                                    shouldPreventDismissGesture: Bool = true) {
         
         guard let visibleViewController = findVisibleViewController(rootController) else {
             assertionFailure("Visible view controller not found")
@@ -135,10 +141,11 @@ extension BaseNavigator: Navigating {
                          module: module,
                          animated: animated,
                          presentationStyle: presentationStyle,
-                         transitionStyle: transitionStyle)
+                         transitionStyle: transitionStyle,
+                         shouldPreventDismissGesture: shouldPreventDismissGesture)
     }
     
-    public func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool) {
+    public func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool, shouldPreventDismissGesture: Bool = true) {
         guard let visibleViewController = findVisibleViewController(rootController) else {
             assertionFailure("Visible view controller not found")
             return

@@ -15,6 +15,11 @@ public protocol Navigating: Presentable {
                         presentationStyle: UIModalPresentationStyle,
                         transitionStyle: UIModalTransitionStyle?,
                         completion: (() -> Void)?)
+    func presentModally(_ module: Presentable, animated: Bool,
+                        presentationStyle: UIModalPresentationStyle,
+                        transitionStyle: UIModalTransitionStyle?,
+                        shouldPreventDismissGesture: Bool,
+                        completion: (() -> Void)?)
     
     func presentCustomModally(_ module: Presentable, animated: Bool)
 
@@ -22,8 +27,13 @@ public protocol Navigating: Presentable {
     func presentModallyAtTop(_ module: Presentable, animated: Bool,
                              presentationStyle: UIModalPresentationStyle,
                              transitionStyle: UIModalTransitionStyle?)
+    func presentModallyAtTop(_ module: Presentable, animated: Bool,
+                             presentationStyle: UIModalPresentationStyle,
+                             transitionStyle: UIModalTransitionStyle?,
+                             shouldPreventDismissGesture: Bool)
     
     func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool)
+    func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool, shouldPreventDismissGesture: Bool)
     
     func push(_ module: Presentable, animated: Bool)
     func push(_ module: Presentable, animated: Bool, completion: (() -> Void)?)
@@ -53,5 +63,34 @@ extension Navigating {
                        presentationStyle: .overCurrentContext,
                        transitionStyle: .crossDissolve,
                        completion: nil)
+    }
+    
+    public func presentModally(_ module: Presentable, animated: Bool,
+                        presentationStyle: UIModalPresentationStyle,
+                        transitionStyle: UIModalTransitionStyle?,
+                        completion: (() -> Void)?) {
+        presentModally(module,
+                       animated: animated,
+                       presentationStyle: presentationStyle,
+                       transitionStyle: transitionStyle,
+                       shouldPreventDismissGesture: true,
+                       completion: completion)
+    }
+    
+    public func presentModallyAtTop(_ module: Presentable, animated: Bool,
+                                    presentationStyle: UIModalPresentationStyle,
+                                    transitionStyle: UIModalTransitionStyle?) {
+        presentModallyAtTop(module,
+                            animated: animated,
+                            presentationStyle: presentationStyle,
+                            transitionStyle: transitionStyle,
+                            shouldPreventDismissGesture: true)
+    }
+    
+    public func presentAtTop(_ module: Presentable, presentationStyle: UIModalPresentationStyle?, animated: Bool) {
+        presentAtTop(module,
+                     presentationStyle: presentationStyle,
+                     animated: animated,
+                     shouldPreventDismissGesture: true)
     }
 }
