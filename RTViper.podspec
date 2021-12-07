@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'RTViper'
   s.version          = '1.0.9'
-  s.summary          = 'Viper version of Rentateam, including coordinators'
+  s.summary          = 'Viper version of Rentateam'
 
   s.description      = <<-DESC
 Viper version of Rentateam, including coordinators
@@ -18,7 +18,7 @@ Viper version of Rentateam, including coordinators
   s.homepage         = 'https://github.com/Rentateam/rtviper'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Rentateam' => 'info@rentateam.ru' }
-  s.source           = { :git => 'https://github.com/Rentateam/RTViper.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Rentateam/rtviper.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
