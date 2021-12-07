@@ -5,7 +5,7 @@
 
 import UIKit
 
-public protocol DefaultNibAssociatable: class {
+public protocol DefaultNibAssociatable: AnyObject {
     static var defaultNibName: String { get }
 }
 

@@ -4,6 +4,6 @@
 
 import UIKit
 
-public protocol Presentable: class {
+public protocol Presentable: AnyObject {
     func toPresent() -> UIViewController
 }

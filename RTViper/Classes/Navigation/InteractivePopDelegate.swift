@@ -2,6 +2,6 @@
 
 import Foundation
 
-public protocol InteractivePopDelegate: class {
+public protocol InteractivePopDelegate: AnyObject {
     func willFinishInteractivePop()
 }

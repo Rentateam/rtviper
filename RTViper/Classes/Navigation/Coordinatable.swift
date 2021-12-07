@@ -4,7 +4,7 @@
 
 import Foundation
 
-public protocol Coordinatable: class {
+public protocol Coordinatable: AnyObject {
     associatedtype DeepLink
     associatedtype Output
 

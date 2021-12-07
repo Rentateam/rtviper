@@ -5,7 +5,7 @@
 
 import UIKit
 
-public protocol DefaultReuseIdentifiable: class {
+public protocol DefaultReuseIdentifiable: AnyObject {
     static var defaultReuseIdentifier: String { get }
 }
 
