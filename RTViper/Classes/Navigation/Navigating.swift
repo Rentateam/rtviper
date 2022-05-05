@@ -22,6 +22,7 @@ public protocol Navigating: Presentable {
                         completion: (() -> Void)?)
     
     func presentCustomModally(_ module: Presentable, animated: Bool)
+    func presentModallyDefault(_ module: Presentable, animated: Bool, completion: (() -> Void)?)
 
     func isCanBePresentedModallyAtTop() -> Bool
     func presentModallyAtTop(_ module: Presentable, animated: Bool,

@@ -122,6 +122,10 @@ extension BaseNavigator: Navigating {
                        presentationStyle: .custom,
                        transitionStyle: .crossDissolve)
     }
+
+    public func presentModallyDefault(_ module: Presentable, animated: Bool, completion: (() -> Void)?) {
+        rootController.present(module.toPresent(), animated: animated, completion: completion)
+    }
     
     public func isCanBePresentedModallyAtTop() -> Bool {
         return findVisibleViewController(rootController) != nil
