@@ -84,10 +84,10 @@ open class AbstractCoordinator: NSObject, NavigatorDelegate {
     }
     
     public func presentAtTop(_ controller: UIViewController, presentationStyle: UIModalPresentationStyle?, animated: Bool = true) {
-        navigator.presentAtTop(controller, presentationStyle: presentationStyle, animated: true)
+        navigator.presentAtTop(controller, presentationStyle: presentationStyle, animated: animated)
     }
     
-    public func dismissModuleAtTop() {
-        navigator.dismissModuleAtTop(animated: true)
+    public func dismissModuleAtTop(animated: Bool = true) {
+        navigator.dismissModuleAtTop(animated: animated)
     }
 }
