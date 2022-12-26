@@ -227,8 +227,8 @@ extension BaseNavigator: Navigating {
 
     public func unwind(count: Int, offset: Int, animated: Bool) {
         var controllers = rootController.viewControllers
-        let fromIndex = controllers.count - count - offset
-        let toIndex = controllers.count - offset
+        let fromIndex = (controllers.count - count - offset) > 0 ? controllers.count - count - offset : 0
+        let toIndex = (controllers.count - offset) > 0 ? controllers.count - offset : 0
         controllers.removeSubrange(fromIndex ..< toIndex)
 
         rootController.setViewControllers(controllers, animated: animated)
